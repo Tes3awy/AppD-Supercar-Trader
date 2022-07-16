@@ -1,0 +1,3555 @@
+{
+	"info": {
+		"_postman_id": "58819b15-5dbd-4417-9a0d-e881cf9d7b7e",
+		"name": "Supercar-Trader",
+		"description": "> **This collection was made as part of the AppDynamics Enablement program in 2022**\n\n# Supercar Trader\n\nSupercar Trader is a Java-based Web Application\n\nThe purpose of Supercar-Trader collection is to generate dynamic traffic (business transactions) for AppDynamics Controller.\n\n---\n\n## Getting Started\n\nThe Supercar Trader collection contains a total of **74** HTTP requests (**69** `GET` requests and **5** `POST` requests)\n\nPages: `3 requests`\nSupercars Pages: `10 requests`\nSearch Page: `3 requests`\nCar Pages: `24 requests`\nCar Pages - View Enquiry: `24 requests`\nSell Page: `3 requests` (_1 POST request should throw an Error to the Controller_)\nEnquire Page: `2 requests`\njsp Pages: `5 requests`\n\n## How to use?\n\nImport both `Supercar-Trader.postman_collection.json` and `Supercar-Trader Environment.postman_environment.json`, and select `Supercar-Trader Environment` to be in use (from the upper right corner. The `No Environment` dropdown)\n\nEdit the `ip` variable in `Supercar-Trader Environment` with the IP address of your Supercar Trader web application and save it.\n\nTo run the entire collection at once (all 25 HTTP requests), click on `Runner` located at the bottom right corner, drag/drop the collection in the `Runner window` as instructed, then click `Start Run`.\n\n## Notes\n\n- All POST requests use dynamic variables that change every time the collection is started to avoid performing redundant POST requests with the same values.\n\n- All requests are tested and passed the test to be considered successful, even for the request with error.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993974"
+	},
+	"item": [
+		{
+			"name": "Pages",
+			"item": [
+				{
+					"name": "Home Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/home.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"home.do"
+							]
+						},
+						"description": "# GET request\n\nHome page"
+					},
+					"response": []
+				},
+				{
+					"name": "About Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/about.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"about.do"
+							]
+						},
+						"description": "# GET request\n\nAbout Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Insurance Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/insurance.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"insurance.do"
+							]
+						},
+						"description": "# GET request\n\nInsurance Page"
+					},
+					"response": []
+				}
+			],
+			"description": "# Pages\n\n1. Home Page `/home.do`\n2. About page `/about.do`\n3. Insurance Page `/insurance.do`"
+		},
+		{
+			"name": "Supercars Pages",
+			"item": [
+				{
+					"name": "Supercars Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/supercars.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"supercars.do"
+							]
+						},
+						"description": "# GET request\n\nSupercars Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "1",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nPorsche Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=2",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "2",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nFerrari Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Aston Martin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=3",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "3",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nAston Martin Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=4",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "4",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nBMW Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes Benz",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=5",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "5",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nMercedes Benz Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=6",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "6",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nJaguar Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=7",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "7",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nLamborghini Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=8",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "8",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nLotus Cars"
+					},
+					"response": []
+				},
+				{
+					"name": "McLaren",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/cars.do?query=manu&mid=9",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"cars.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "manu",
+									"description": "Manufacturer"
+								},
+								{
+									"key": "mid",
+									"value": "9",
+									"description": "Manufacturer ID"
+								}
+							]
+						},
+						"description": "# GET request\n\nMcLaren Cars"
+					},
+					"response": []
+				}
+			],
+			"description": "# Supercars Pages\n\nSupercars `/supercars.do`\n\n01. Porsche `/cars.do?query=manu&mid=1`\n02. Ferrari `/cars.do?query=manu&mid=2`\n03. Aston Martin `/cars.do?query=manu&mid=3`\n04. BMW `/cars.do?query=manu&mid=4`\n05. Mercedes Benz `/cars.do?query=manu&mid=5`\n06. Jaguar `/cars.do?query=manu&mid=6`\n07. Lamborghini `/cars.do?query=manu&mid=7`\n08. Lotus `/cars.do?query=manu&mid=8`\n09. McLaren `/cars.do?query=manu&mid=9`"
+		},
+		{
+			"name": "Search Page",
+			"item": [
+				{
+					"name": "Search Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/search.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"search.do"
+							]
+						},
+						"description": "# GET request\n\nSearch Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Search for a Car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Search Form Submitted\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    responseText = pm.response.text();\r",
+									"    carName = pm.collectionVariables.get(\"$randomCar\");\r",
+									"    pm.expect(responseText).to.include(\"Your search \"+\"'\"+carName+\"'\"+\" returned the following\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"carArray = [\"Porsche\", \"Ferrari\", \"Aston Martin\", \"BMW\", \"Mercedes Benz\", \"Jaguar\", \"Lamborghini\", \"Lotus\", \"McLaren\", \"911\"]\r",
+									"var carName = carArray[Math.floor(Math.random() * carArray.length)];\r",
+									"pm.collectionVariables.set(\"$randomCar\", carName);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "criteria",
+									"value": "{{$randomCar}}",
+									"description": "A random car",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/search.do?query=search",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"search.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "search"
+								}
+							]
+						},
+						"description": "# POST request\n\nDynamically searches for different cars every request using Postman `Pre-request Scripts`"
+					},
+					"response": []
+				},
+				{
+					"name": "Find all Cars",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Search Form Submitted\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    responseText = pm.response.text();\r",
+									"    pm.expect(responseText).to.include(\"Your search '' returned the following\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "criteria",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/search.do?query=search",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"search.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "search"
+								}
+							]
+						},
+						"description": "# POST request"
+					},
+					"response": []
+				}
+			],
+			"description": "# Search\n\n1. Search Page is a GET request.\n\n2. Search for a car requires a single body key-value pair `criteria`. Example key is `criteria` and its value is `Ferrari`. \n\n3. Find all cars searches for all cars with no criteria.\n\n> Body type has to be `x-www-form-urlencoded` in both POST requests."
+		},
+		{
+			"name": "Car Pages",
+			"item": [
+				{
+					"name": "Vantage V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "1",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Vantage V8"
+					},
+					"response": []
+				},
+				{
+					"name": "DB11 V12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=2",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "2",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# DB11 V12"
+					},
+					"response": []
+				},
+				{
+					"name": "Vanquish Volante V12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=3",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "3",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Vanquish Volante V12"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 Pista V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=4",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "4",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 Pista V8"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 Spider V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=5",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "5",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 Spider V8"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 GTB V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=6",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "6",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 GTB V8"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 GT3 RS H6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=7",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "7",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 GT3 RS H6"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 Carrera H6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=8",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "8",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 Carrera H6"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 GT2 RS H6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=9",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "9",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 GT2 RS H6"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW Nazca M12 V12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=10",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "10",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW Nazca M12 V12"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW i8 Hybrid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=11",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "11",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW i8 Hybrid"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW 328 Hommag IL6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=12",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "12",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW 328 Hommag IL6"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes AMG Project ONE Hybrid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=13",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "13",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes AMG Project ONE Hybrid"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes AMG GT R PRO V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=14",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "14",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes AMG GT R PRO V8"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes CLS 63 AMG V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=15",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "15",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes CLS 63 AMG V8"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar Vision GT Electric",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=16",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "16",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar Vision GT Electric"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar XJ220 V6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=17",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "17",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar XJ220 V6"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar XKE IL6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=18",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "18",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar XKE IL6"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Aventador V12",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=19",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "19",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Aventador V12"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Huracan LP V10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=20",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "20",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Huracan LP V10"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Gallardo LP V10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=21",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "21",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Gallardo LP V10"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Evora Coupe V6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=22",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "22",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Evora Coupe V6"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Evija Electric",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=23",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "23",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Evija Electric"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Esprit Turbo V8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=car&cid=24",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "car",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "24",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Esprit Turbo V8"
+					},
+					"response": []
+				}
+			],
+			"description": "# Cars\n\nIn search page, if you click `search` with empty input field, all results are fetched from the database. Each car has a unique ID. This folder contains all default cars in Supercar Trader."
+		},
+		{
+			"name": "Car Pages - View Enquiry",
+			"item": [
+				{
+					"name": "Vantage V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=1",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "1",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Vantage V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "DB11 V12 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=2",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "2",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# DB11 V12 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Vanquish Volante V12 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=3",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "3",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Vanquish Volante V12 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 Pista V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=4",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "4",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 Pista V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 Spider V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=5",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "5",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 Spider V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Ferrari 488 GTB V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=6",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "6",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Ferrari 488 GTB V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 GT3 RS H6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=7",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "7",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 GT3 RS H6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 Carrera H6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=8",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "8",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 Carrera H6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Porsche 911 GT2 RS H6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=9",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "9",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Porsche 911 GT2 RS H6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW Nazca M12 V12 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=10",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "10",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW Nazca M12 V12 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW i8 Hybrid Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=11",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "11",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW i8 Hybrid Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "BMW 328 Hommag IL6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=12",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "12",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# BMW 328 Hommag IL6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes AMG Project ONE Hybrid Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=13",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "13",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes AMG Project ONE Hybrid Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes AMG GT R PRO V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=14",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "14",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes AMG GT R PRO V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Mercedes CLS 63 AMG V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=15",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "15",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Mercedes CLS 63 AMG V8 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar Vision GT Electric Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=16",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "16",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar Vision GT Electric Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar XJ220 V6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=17",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "17",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar XJ220 V6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Jaguar XKE IL6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=18",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "18",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Jaguar XKE IL6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Aventador V12 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=19",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "19",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Aventador V12 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Huracan LP V10 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=20",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "20",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Huracan LP V10 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lamborghini Gallardo LP V10 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=21",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "21",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lamborghini Gallardo LP V10 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Evora Coupe V6 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=22",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "22",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Evora Coupe V6 Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Evija Electric Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=23",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "23",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Evija Electric Enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "Lotus Esprit Turbo V8 Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/car.do?query=carEnquiries&cid=24",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"car.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "carEnquiries",
+									"description": "Query Type"
+								},
+								{
+									"key": "cid",
+									"value": "24",
+									"description": "Car ID"
+								}
+							]
+						},
+						"description": "# Lotus Esprit Turbo V8 Enquiry"
+					},
+					"response": []
+				}
+			],
+			"description": "# Cars\n\nIn search page, if you click `search` with empty input field, all results are fetched from the database. Each car has a unique ID. This folder contains all default cars in Supercar Trader."
+		},
+		{
+			"name": "Sell Page",
+			"item": [
+				{
+					"name": "Sell Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/sell.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"sell.do"
+							]
+						},
+						"description": "# GET request\n\nSell Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Sell a Car",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Sell Form Submitted\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    responseText = pm.response.text();\r",
+									"    pm.expect(responseText).to.include(\"Confirmation\");\r",
+									"    pm.expect(responseText).to.include(\"Thanks for selling through Supercars trader. Your enquiry will be passed on to seller.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// select a manufacturer ID and a car model\r",
+									"var cars = {\r",
+									"    1: \"Porsche\",\r",
+									"    2: \"Ferrari\",\r",
+									"    3: \"Aston Martin\",\r",
+									"    4: \"BMW\",\r",
+									"    5: \"Mercedes Benz\",\r",
+									"    6: \"Jaguar\",\r",
+									"    7: \"Lamborghini\",\r",
+									"    8: \"Lotus\",\r",
+									"    9: \"McLaren\"\r",
+									"}\r",
+									"\r",
+									"var keys = Object.keys(cars);\r",
+									"var values = Object.values(cars);\r",
+									"var i = Math.floor(Math.random() * keys.length);\r",
+									"var carManuId = keys[i];\r",
+									"var carModel = values[i];\r",
+									"pm.collectionVariables.set(\"$carManuId\", carManuId);\r",
+									"pm.collectionVariables.set(\"$carModel\", carModel);\r",
+									"\r",
+									"// generate car engine CC\r",
+									"var CCValues = _.range(1500, 5500, 500);\r",
+									"var CCValue = CCValues[Math.floor(Math.random() * CCValues.length)];\r",
+									"pm.collectionVariables.set(\"$carEngine\", CCValue + \" CC\");\r",
+									"\r",
+									"// generates a random year between 2015 and current year\r",
+									"pm.collectionVariables.set(\"$carYear\", _.random(2015, new Date().getFullYear()));\r",
+									"\r",
+									"// generates random price\r",
+									"pm.collectionVariables.set(\"$carPrice\", _.random(10**6, 30**6));\r",
+									"\r",
+									"// picks one of the 3 lines\r",
+									"var linesArray = [\"Base Line\", \"High Line\", \"Top Line\"]\r",
+									"var lineType = linesArray[Math.floor(Math.random() * linesArray.length)];\r",
+									"pm.collectionVariables.set(\"$carSummary\", lineType);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "manufacturer",
+									"value": "{{$carManuId}}",
+									"description": "Manufacturer Dropdown List (Integer)",
+									"type": "default"
+								},
+								{
+									"key": "carModel",
+									"value": "{{$carModel}} {{$randomLoremWord}}",
+									"description": "Car Model (String)",
+									"type": "default"
+								},
+								{
+									"key": "carEngine",
+									"value": "{{$carEngine}}",
+									"description": "Car Engine (String)",
+									"type": "default"
+								},
+								{
+									"key": "carColor",
+									"value": "{{$randomColor}}",
+									"description": "Car Color (String). A Random Color",
+									"type": "default"
+								},
+								{
+									"key": "carYear",
+									"value": "{{$carYear}}",
+									"description": "Year (Integer)",
+									"type": "default"
+								},
+								{
+									"key": "carPrice",
+									"value": "{{$carPrice}}",
+									"description": "Car Price (Integer)",
+									"type": "default"
+								},
+								{
+									"key": "carSummary",
+									"value": "{{$carSummary}}",
+									"description": "Summary (String)",
+									"type": "default"
+								},
+								{
+									"key": "carDetails",
+									"value": "Leather seats, Power Steering, Air Conditioning, Intelligent parking system, Remote Keyless, Electric mirrors, Front Power Windows, Back Power Windows, Tinted Glass, Multifunction sound system, AUX, USB ports, Bluetooth, Rear sensors, EPS, Side Airbag, ABS, EBD, Sensors, Driver Airbag, Anti - theft System, Front sensors, Passenger Airbag",
+									"description": "Detailed Description (String) or use {{$randomLoremParagraphs}} global variable for placeholder text",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/sell.do?query=save",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"sell.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "save"
+								}
+							]
+						},
+						"description": "# POST request\n\nDynamically generates `manufacturer`, `carModel`, `carEngine`, `carColor`, `carYear`, `carPrice`, and `carSummary` using Postman `Pre-request Scripts`"
+					},
+					"response": []
+				},
+				{
+					"name": "Sell a Car with Error",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Sell Form Submitted with Error\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(500);\r",
+									"    pm.response.to.have.status(\"Internal Server Error\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/sell.do?query=save",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"sell.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "save"
+								}
+							]
+						},
+						"description": "# POST request\n\nSubmit an empty body to throw an error"
+					},
+					"response": []
+				}
+			],
+			"description": "# Sell Page\n\n1. `Sell page` is a GET request.\n2. `Sell a car` is a POST request where eight key-value pairs are required for a successful POST request.\n- `manufacturer` is an integer (number)\n- `carModel` is a string (text)\n- `carEngine` is a string (text)\n- `carColor` is a string (text)\n- `carYear` is an integer (number)\n- `carPrice` is an integer (number)\n- `carSummary` is a string (text)\n- `carDetails` is a string (text)\n\n> Body type has to be `x-www-form-urlencoded` in the POST requests."
+		},
+		{
+			"name": "Enquire Page",
+			"item": [
+				{
+					"name": "Enquire Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/enquire.do",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"enquire.do"
+							]
+						},
+						"description": "# GET request\n\nEnquire Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit an Enquiry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Enquiry Form Submitted\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    responseText = pm.response.text();\r",
+									"    pm.expect(responseText).to.include(\"Confirmation\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "{{$randomFullName}}",
+									"description": "A Random Full Name or Your Name",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "{{$randomExampleEmail}}",
+									"description": "A Random Email or Your Email",
+									"type": "default"
+								},
+								{
+									"key": "comment",
+									"value": "{{$randomLoremParagraphs}}",
+									"description": "Enquiry Body/Comments",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/enquire.do?query=save",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"enquire.do"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "save"
+								}
+							]
+						},
+						"description": "# POST request\n\nDynamically generates random `name`, `email` and `comment`."
+					},
+					"response": []
+				}
+			],
+			"description": "# Enquire Pages\n\n1. Enquire page is a GET request\n\n2. Submit an Enquiry is a POST request where it requires three input fields.\n\n- Name `name`\n- Email `email`\n- Description `comment`\n\n> Car is a read-only input field (`carName`)."
+		},
+		{
+			"name": "jsp Pages",
+			"item": [
+				{
+					"name": "AMG",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/amg.jsp",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"amg.jsp"
+							]
+						},
+						"description": "# GET request\n\nAMG JSP Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Alpina",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/alpina.jsp",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"alpina.jsp"
+							]
+						},
+						"description": "# GET request\n\nAlpina JSP Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Mazda Speed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/mazdaspeed.jsp",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"mazdaspeed.jsp"
+							]
+						},
+						"description": "# GET request\n\nMazda Speed JSP Page"
+					},
+					"response": []
+				},
+				{
+					"name": "RUF",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/ruf.jsp",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"ruf.jsp"
+							]
+						},
+						"description": "# GET request\n\nRUF JSP Page"
+					},
+					"response": []
+				},
+				{
+					"name": "Gembella",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ip}}:8080/Supercar-Trader/gembella.jsp",
+							"protocol": "http",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "8080",
+							"path": [
+								"Supercar-Trader",
+								"gembella.jsp"
+							]
+						},
+						"description": "# GET request\n\nGembella JSP Page"
+					},
+					"response": []
+				}
+			],
+			"description": "# jsp Pages\n\nJSP pages are five JavaServer Pages that can be found at the Home page under **`Performance Parts`** in the right sidebar."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
